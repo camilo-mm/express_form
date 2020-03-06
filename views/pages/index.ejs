@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  </head>
+
+  <h1>Form test</h1>
+
+  <form action="/submit" method="POST">
+    <div class="row">
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">face</i>
+          <input id="id_name" type="text" <% if(valid_name === "1"){ %> value=<%= name_cookie %> <% } %> class="validate" name="name" />
+
+          <label for="id_name">
+            <% if(valid_name === "1"){ %>
+            <span class="new badge green">Correct</span>
+            <% }else if(valid_name === "0"){ %>
+            <span class="new badge red">Error</span>
+            <% } %>Name
+          </label>
+          <!-- <span class="helper-text" data-error="wrong" data-success="right">Helper text</span> -->
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">fingerprint</i>
+          <input id="id_surname" type="text" class="validate" name="surname" />
+          <label for="id_surname">
+            <% if(valid_surname === "1"){ %>
+            <span class="new badge green">Correct</span>
+            <% }else if(valid_surname === "0"){ %>
+            <span class="new badge red">Error</span>
+            <% } %>Surname
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="row">
+        <div class="input-field col s6">
+          <label>
+            <input type="checkbox" name="agreepolicy" />
+            <span>I have read and agree to the Privacy Policy</span>
+          </label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">security</i>
+          <input id="id_password" type="password" class="validate" name="password" />
+          <label for="id_password">
+            <% if(valid_password === "1"){ %>
+            <span class="new badge green">Correct</span>
+            <% }else if(valid_password === "0"){ %>
+            <span class="new badge red">Error</span>
+            <% } %> Password
+          </label>
+        </div>
+        <div class="input-field col s6">
+          <button class="waves-effect waves-light btn" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </form>
+  <p class="text-center text-muted">© Copyright 2020 Alejo Rondon</p>
+</html>
+
+<!-- input type="text" name="user" />
+    <input type="text" name="password" />
+    <p>
+      <label>
+        <input type="checkbox" />
+        <span>Red</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" checked="checked" />
+        <span>Yellow</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" class="filled-in" checked="checked" />
+        <span>Filled in</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input id="indeterminate-checkbox" type="checkbox" />
+        <span>Indeterminate Style</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" checked="checked" disabled="disabled" />
+        <span>Green</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" disabled="disabled" />
+        <span>Brown</span>
+      </label>
+    </p> -->

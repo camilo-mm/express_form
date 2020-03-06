@@ -4,7 +4,8 @@
   "description": "Complete example using forms in express",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "express_form": "nodemon ./index.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   },
   "homepage": "https://github.com/ThoughtFisher/express_form#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.4",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
     "nodemon": "^2.0.2"
